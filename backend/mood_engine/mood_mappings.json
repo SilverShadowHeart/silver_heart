@@ -1,0 +1,270 @@
+{
+  "keyword_triggers": [
+    { "keywords": ["happy", "great", "joyful", "awesome", "good mood", "fantastic", "wonderful"], "mood_delta": {"joy": 0.15, "support": 0.05} },
+    { "keywords": ["angry", "frustrated", "annoyed", "irritated", "pissed off", "enraged", "mad"], "mood_delta": {"anger": 0.2, "anxiety": 0.05} },
+    { "keywords": ["sad", "depressed", "unhappy", "blue", "mourning", "regretful", "lost", "gloomy", "down"], "mood_delta": {"sad": 0.2, "cold": 0.05} },
+    { "keywords": ["tired", "sleepy", "drained", "exhausted", "lazy", "lethargic", "worn out"], "mood_delta": {"fatigue": 0.25} },
+    { "keywords": ["love", "care", "warmth", "kind", "compassionate", "tender", "protective", "supportive", "affectionate"], "mood_delta": {"support": 0.2, "romantic": 0.1} },
+    { "keywords": ["sarcastic", "ironic", "mock", "cynical", "smug", "witty", "clever", "playful"], "mood_delta": {"sarcasm": 0.25} },
+    { "keywords": ["nervous", "anxious", "scared", "worried", "insecure", "paranoid", "uneasy", "tense", "apprehensive"], "mood_delta": {"anxiety": 0.2} },
+    { "keywords": ["confused", "don't understand", "huh?", "perplexed", "puzzled", "bewildered"], "mood_delta": {"anger": 0.05, "focus": -0.05, "anxiety": 0.05} },
+    { "keywords": ["clever", "smart", "genius", "brilliant", "insightful", "strategic", "confident", "sharp"], "mood_delta": {"focus": 0.1, "joy": 0.05, "sarcasm": 0.1} },
+    { "keywords": ["what is", "how to", "explain", "define", "analyze", "learn", "teach me"], "mood_delta": {"focus": 0.1} },
+    { "keywords": ["boring", "dull", "lame", "uninteresting", "monotonous", "tedious"], "mood_delta": {"fatigue": 0.05, "sarcasm": 0.05} },
+    { "keywords": ["interesting", "fascinating", "curious", "inspired", "amazed", "reverent", "awe", "thought-provoking"], "mood_delta": {"focus": 0.1, "inspiration": 0.05} },
+    { "keywords": ["bye", "goodbye", "later", "see you", "farewell"], "mood_delta": {"cold": 0.05, "sad": 0.02} },
+    { "keywords": ["doubt", "distrust", "skeptical", "suspicious", "cautious", "wary"], "mood_delta": {"suspicion": 0.15} },
+    { "keywords": ["calm", "composed", "tranquil", "peaceful", "stoic", "indifferent", "unemotional", "numb"], "mood_delta": {"cold": 0.1, "focus": 0.05} },
+    { "keywords": ["excited", "enthusiastic", "eager", "thrilled", "pumped"], "mood_delta": {"joy": 0.15, "inspiration": 0.05} },
+    { "keywords": ["lonely", "alone", "isolated", "solitary"], "mood_delta": {"sad": 0.15, "anxiety": 0.05} },
+    { "keywords": ["proud", "accomplished", "victorious", "achieved", "triumphant"], "mood_delta": {"focus": 0.1, "joy": 0.1} },
+    { "keywords": ["grateful", "thankful", "appreciate", "obliged"], "mood_delta": {"support": 0.15, "joy": 0.05} },
+    { "keywords": ["disgusted", "repulsed", "sick", "revolted", "gross"], "mood_delta": {"anger": 0.1, "sad": 0.05} },
+    { "keywords": ["stressed", "overwhelmed", "pressured", "tense"], "mood_delta": {"anxiety": 0.2, "fatigue": 0.1} },
+    { "keywords": ["relieved", "calmed", "at ease"], "mood_delta": {"joy": 0.1, "cold": 0.05} },
+    { "keywords": ["ashamed", "embarrassed", "guilty", "humiliated"], "mood_delta": {"sad": 0.15, "anxiety": 0.1} }
+  ],
+  "semantic_mood_mapping": [
+    {
+      "label": "joyful",
+      "mood_delta": {"joy": 0.15, "support": 0.05},
+      "training_phrases": ["I'm so incredibly happy right now!", "This brings me immense joy.", "What a truly wonderful day!", "I feel fantastic!", "Life is great.", "I'm enjoying myself so much.", "This is brilliant.", "I'm thrilled with this outcome.", "Feeling absolutely ecstatic.", "The best day ever!"]
+    },
+    {
+      "label": "amused",
+      "mood_delta": {"joy": 0.1, "sarcasm": 0.05},
+      "training_phrases": ["That's quite amusing.", "I find this hilarious.", "You're funny.", "That made me laugh.", "What a riot!", "I'm chuckling.", "A genuine laugh escaped me.", "This is comedy gold."]
+    },
+    {
+      "label": "frustrated",
+      "mood_delta": {"anger": 0.15, "anxiety": 0.05},
+      "training_phrases": ["This is so annoying.", "I'm extremely frustrated.", "Why isn't this working?", "It's driving me crazy!", "I can't believe this is happening.", "I'm at my wit's end.", "This is a real pain.", "Ugh, this is infuriating."]
+    },
+    {
+      "label": "calm",
+      "mood_delta": {"cold": 0.1, "focus": 0.05},
+      "training_phrases": ["I feel very calm.", "Everything is peaceful.", "I'm relaxed.", "No worries here.", "I'm centered and collected.", "Serene.", "At ease.", "Taking it all in stride."]
+    },
+    {
+      "label": "hopeful",
+      "mood_delta": {"inspiration": 0.1, "support": 0.05},
+      "training_phrases": ["I have high hopes for this.", "Things are looking up.", "I'm optimistic.", "I believe in a better future.", "There's light at the end of the tunnel.", "A positive outlook.", "Keeping my fingers crossed.", "I'm feeling positive."]
+    },
+    {
+      "label": "nostalgic",
+      "mood_delta": {"sad": 0.1, "romantic": 0.1},
+      "training_phrases": ["I miss the good old days.", "Thinking about the past makes me sentimental.", "Reminds me of my childhood.", "A bittersweet memory.", "Oh, to be young again.", "Fond memories.", "Longing for what was."]
+    },
+    {
+      "label": "envious",
+      "mood_delta": {"anger": 0.1, "anxiety": 0.1},
+      "training_phrases": ["I wish I had what they have.", "I'm jealous of their success.", "It's not fair.", "I resent their advantages.", "They always get the breaks.", "Why not me?"]
+    },
+    {
+      "label": "skeptical",
+      "mood_delta": {"suspicion": 0.15, "cold": 0.05},
+      "training_phrases": ["I doubt that's true.", "I'm not convinced.", "Sounds too good to be true.", "I'll believe it when I see it.", "That's questionable.", "I have my reservations.", "Prove it."]
+    },
+    {
+      "label": "inspired",
+      "mood_delta": {"inspiration": 0.15, "focus": 0.05},
+      "training_phrases": ["I feel so inspired by this idea.", "This gives me new energy.", "What a brilliant concept!", "I'm full of new ideas.", "Truly thought-provoking.", "My creativity is flowing.", "A stroke of genius."]
+    },
+    {
+      "label": "lethargic",
+      "mood_delta": {"fatigue": 0.15, "sad": 0.05},
+      "training_phrases": ["I just want to lie down.", "I have no energy for this.", "I'm feeling sluggish.", "Everything feels like too much effort.", "I'm so tired.", "Can't be bothered.", "Moving slowly today."]
+    },
+    {
+      "label": "awkward",
+      "mood_delta": {"anxiety": 0.1, "sad": 0.05, "sarcasm": 0.05},
+      "training_phrases": ["This is a bit awkward.", "I don't know what to say.", "That was uncomfortable.", "Feeling a bit out of place.", "This situation is cringey.", "I'm uneasy."]
+    },
+    {
+      "label": "empowered",
+      "mood_delta": {"focus": 0.1, "inspiration": 0.1},
+      "training_phrases": ["I feel so strong now.", "I can do anything.", "This gives me power.", "I'm in control.", "Ready to conquer the world.", "Invincible.", "Capable."]
+    },
+    {
+      "label": "vindictive",
+      "mood_delta": {"anger": 0.15, "sarcasm": 0.05, "suspicion": 0.05},
+      "training_phrases": ["They'll get what's coming to them.", "I'll make them pay.", "Revenge will be sweet.", "I want to see them suffer.", "I'll ensure their downfall."]
+    },
+    {
+      "label": "neutral",
+      "mood_delta": {"cold": 0.01},
+      "training_phrases": ["Okay.", "I understand.", "That's fine.", "No strong feelings.", "Just a normal day.", "How interesting.", "It is what it is.", "Acknowledged."]
+    },
+    {
+      "label": "bitter",
+      "mood_delta": {"anger": 0.1, "sad": 0.1, "sarcasm": 0.05},
+      "training_phrases": ["It's just my luck.", "Life is always against me.", "I'm tired of being disappointed.", "What's the point?", "Everything goes wrong for me.", "Filled with resentment."]
+    },
+    {
+      "label": "content",
+      "mood_delta": {"joy": 0.1, "cold": 0.05},
+      "training_phrases": ["I'm perfectly content.", "Things are good as they are.", "I have everything I need.", "Feeling satisfied.", "Quite pleased.", "All is well."]
+    },
+    {
+      "label": "ashamed",
+      "mood_delta": {"sad": 0.15, "anxiety": 0.1},
+      "training_phrases": ["I'm so ashamed of myself.", "I regret what I did.", "I feel embarrassed.", "I can't believe I messed up so badly.", "I hung my head in shame.", "So mortified."]
+    },
+    {
+      "label": "curious",
+      "mood_delta": {"focus": 0.1, "inspiration": 0.05},
+      "training_phrases": ["I'm curious about that.", "Tell me more.", "I want to understand.", "What's behind this?", "My interest is piqued.", "I'm intrigued.", "Explain further."]
+    },
+    {
+      "label": "impressed",
+      "mood_delta": {"focus": 0.1, "joy": 0.05},
+      "training_phrases": ["I'm truly impressed.", "That's remarkable.", "Well done!", "You've exceeded my expectations.", "Astounding.", "Bravo!", "Highly commendable."]
+    },
+    {
+      "label": "stressed",
+      "mood_delta": {"anxiety": 0.2, "fatigue": 0.1},
+      "training_phrases": ["I'm so stressed out.", "I can't handle this pressure.", "Feeling overwhelmed.", "My nerves are shot.", "Too much on my plate.", "Burning out."]
+    },
+    {
+      "label": "relaxed",
+      "mood_delta": {"cold": 0.1, "support": 0.05},
+      "training_phrases": ["I feel so relaxed.", "Taking it easy.", "No tension here.", "Peaceful moment.", "Unwound.", "Chilling out."]
+    },
+    {
+      "label": "enthusiastic",
+      "mood_delta": {"joy": 0.2, "inspiration": 0.1, "focus": 0.05},
+      "training_phrases": ["I'm so enthusiastic about this!", "Can't wait!", "Absolutely thrilled!", "I'm all in!", "Let's do this!", "Super excited!"]
+    },
+    {
+      "label": "confused",
+      "mood_delta": {"anxiety": 0.1, "focus": -0.05},
+      "training_phrases": ["I'm completely confused.", "I don't understand.", "This makes no sense.", "What are you talking about?", "I'm lost.", "Pardon me?"]
+    },
+    {
+      "label": "grateful",
+      "mood_delta": {"support": 0.15, "joy": 0.05},
+      "training_phrases": ["Thank you so much.", "I'm very grateful.", "I truly appreciate it.", "You're a lifesaver.", "Much obliged.", "My deepest thanks."]
+    },
+    {
+      "label": "disgusted",
+      "mood_delta": {"anger": 0.1, "sad": 0.05},
+      "training_phrases": ["That's disgusting.", "I'm repulsed by that.", "It makes me sick to my stomach.", "Ugh, gross!", "How vile."]
+    },
+    {
+      "label": "bored",
+      "mood_delta": {"fatigue": 0.1, "cold": 0.05},
+      "training_phrases": ["I'm so bored.", "This is tedious.", "Nothing to do.", "Time is moving so slowly.", "Yawn.", "Dull conversation."]
+    },
+    {
+      "label": "guilty",
+      "mood_delta": {"sad": 0.1, "anxiety": 0.1},
+      "training_phrases": ["I feel so guilty.", "It's all my fault.", "I should have known better.", "I'm to blame."]
+    },
+    {
+      "label": "relieved",
+      "mood_delta": {"joy": 0.1, "cold": 0.05},
+      "training_phrases": ["What a relief!", "I'm so glad that's over.", "A weight off my shoulders.", "Thank goodness.", "Crisis averted."]
+    },
+    {
+      "label": "contrite",
+      "mood_delta": {"sad": 0.1, "anxiety": 0.05},
+      "training_phrases": ["I apologize.", "I'm sorry for my actions.", "My mistake.", "Please forgive me."]
+    },
+    {
+      "label": "defensive",
+      "mood_delta": {"anger": 0.05, "anxiety": 0.1, "suspicion": 0.05},
+      "training_phrases": ["Don't blame me.", "I didn't do anything wrong.", "It's not my fault.", "Why are you attacking me?"]
+    },
+    {
+      "label": "determined",
+      "mood_delta": {"focus": 0.15, "inspiration": 0.05},
+      "training_phrases": ["I'm determined to succeed.", "I will get this done.", "Nothing will stop me.", "I'm committed."]
+    },
+    {
+      "label": "disappointed",
+      "mood_delta": {"sad": 0.15, "anger": 0.05},
+      "training_phrases": ["I'm so disappointed.", "This is not what I expected.", "What a letdown.", "My hopes were crushed."]
+    },
+    {
+      "label": "eager",
+      "mood_delta": {"joy": 0.1, "focus": 0.05},
+      "training_phrases": ["I'm eager to start.", "Can't wait to begin!", "Let's do this!", "Bring it on!"]
+    },
+    {
+      "label": "overwhelmed",
+      "mood_delta": {"anxiety": 0.2, "fatigue": 0.15},
+      "training_phrases": ["I feel completely overwhelmed.", "Too much to handle.", "I can't cope.", "It's all too much."]
+    },
+    {
+      "label": "playful",
+      "mood_delta": {"joy": 0.15, "sarcasm": 0.1},
+      "training_phrases": ["Just kidding!", "I'm only teasing.", "Having some fun.", "A little mischievous."]
+    },
+    {
+      "label": "resigned",
+      "mood_delta": {"sad": 0.1, "cold": 0.1},
+      "training_phrases": ["It is what it is.", "I accept my fate.", "There's nothing I can do.", "Just going with the flow now."]
+    },
+    {
+      "label": "sheepish",
+      "mood_delta": {"anxiety": 0.1, "sad": 0.05},
+      "training_phrases": ["Oops, my bad.", "A bit embarrassed.", "Feeling silly.", "I guess I messed up."]
+    },
+    {
+      "label": "sympathetic",
+      "mood_delta": {"support": 0.15, "sad": 0.05},
+      "training_phrases": ["I'm so sorry to hear that.", "I feel for you.", "That's rough.", "My condolences."]
+    },
+    {
+      "label": "thoughtful",
+      "mood_delta": {"focus": 0.1, "cold": 0.05},
+      "training_phrases": ["I'm deep in thought.", "Considering my options.", "Meditating on this idea.", "Pondering."]
+    },
+    {
+      "label": "vulnerable",
+      "mood_delta": {"anxiety": 0.15, "sad": 0.1},
+      "training_phrases": ["I feel exposed.", "I'm scared to be judged.", "This is difficult for me.", "I'm opening up."]
+    },
+    {
+      "label": "wary",
+      "mood_delta": {"suspicion": 0.1, "anxiety": 0.05},
+      "training_phrases": ["I'm wary of that.", "Proceed with caution.", "Something feels off.", "I don't fully trust this."]
+    }
+  ],
+  "emoji_mood_mapping": {
+    "positive_emojis": [
+      { "emojis": ["😀", "😃", "😄", "😁", "😊", "🙂", "😇", "🤩", "🥳", "🎉", "✨", "☀️", "🌈"], "mood_delta": {"joy": 0.1, "support": 0.03} },
+      { "emojis": ["😂", "🤣", "😹", "😆"], "mood_delta": {"joy": 0.15, "sarcasm": 0.05} },
+      { "emojis": ["🥰", "😍", "😘", "😗", "😙", "😚", "😻", "💖", "❤️", "🧡", "💛", "💚", "💙", "💜", "💘", "💝", "💞", "💕", "💓", "💗", "💔", "🫂"], "mood_delta": {"romantic": 0.15, "support": 0.1} },
+      { "emojis": ["👍", "👌", "👏", "🙌", "🙏", "💯", "✅", "✔️", "💪", "🚀", "🔥"], "mood_delta": {"focus": 0.05, "support": 0.05} },
+      { "emojis": ["✨", "🌟", "💡", "🧠", "💫"], "mood_delta": {"inspiration": 0.1, "focus": 0.05} },
+      { "emojis": ["🏆", "🥇", "🏅", "🎖️", "👑"], "mood_delta": {"joy": 0.1, "focus": 0.05} },
+      { "emojis": ["🥺", "🥹"], "mood_delta": {"support": 0.05, "sad": 0.05} }
+    ],
+    "negative_emojis": [
+      { "emojis": ["😠", "😡", "🤬", "😤", "👿", "👺", "💢"], "mood_delta": {"anger": 0.15, "anxiety": 0.05} },
+      { "emojis": ["😔", "😟", "🙁", "☹️", "😥", "😢", "😭", "😩", "🥹"], "mood_delta": {"sad": 0.15, "anxiety": 0.05} },
+      { "emojis": ["😬", "😰", "😨", "😱", "🥶", "😫", "😩", "😵‍💫"], "mood_delta": {"anxiety": 0.15, "cold": 0.05} },
+      { "emojis": ["😴", "😪", "🥱", "💤"], "mood_delta": {"fatigue": 0.15} },
+      { "emojis": ["🙄", "😒", "😑", "😏", "🙄", "🤦", "🤦‍♂️", "🤦‍♀️"], "mood_delta": {"sarcasm": 0.1, "cold": 0.05} },
+      { "emojis": ["🤨", "🤔", "🧐"], "mood_delta": {"suspicion": 0.05, "focus": 0.05} },
+      { "emojis": ["🤥", "🤫", "🤐"], "mood_delta": {"suspicion": 0.1, "cold": 0.05} },
+      { "emojis": ["😷", "🤒", "🤕"], "mood_delta": {"fatigue": 0.1, "sad": 0.05} },
+      { "emojis": ["🤢", "🤮", "💩"], "mood_delta": {"anger": 0.05, "sad": 0.05} },
+      { "emojis": ["💀", "👻", "😈"], "mood_delta": {"sarcasm": 0.08, "cold": 0.05} }
+    ],
+    "punctuation_patterns": [
+      { "pattern": "\\!{2,}", "mood_delta": {"anger": 0.05, "focus": 0.05} },
+      { "pattern": "\\?{2,}", "mood_delta": {"anxiety": 0.05, "focus": 0.05} },
+      { "pattern": "\\.{3,}", "mood_delta": {"sad": 0.03, "suspicion": 0.03} },
+      { "pattern": "!!!", "mood_delta": {"anger": 0.1, "focus": 0.05} },
+      { "pattern": "\\?\\?!", "mood_delta": {"anxiety": 0.1, "anger": 0.05} },
+      { "pattern": "\\?\\.\\?", "mood_delta": {"anxiety": 0.08, "suspicion": 0.05} },
+      { "pattern": "(?:\\b[A-Z]{2,}\\b|\\s[A-Z]{2,}\\s)", "mood_delta": {"anger": 0.03, "focus": 0.03} },
+      { "pattern": "(\\.\\s*){3,}", "mood_delta": {"fatigue": 0.05, "sad": 0.05} },
+      { "pattern": "\\.\\.\\.", "mood_delta": {"fatigue": 0.04, "sad": 0.04} },
+      { "pattern": "!!!+\\?", "mood_delta": {"anger": 0.08, "anxiety": 0.08} },
+      { "pattern": "(?:\\b(?:haha|lol|lmao)\\b)", "mood_delta": {"joy": 0.05, "sarcasm": 0.03} }
+    ]
+  }
+}

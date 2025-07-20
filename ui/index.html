@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SILVER</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="main-container">
+        <div id="chat-panel">
+            <div id="header">
+                <h1>SILVER</h1>
+                <div id="status-indicator"></div>
+            </div>
+            <div id="chat-container">
+                <div id="chat-log">
+                    <div class="ai-message initial-message">System online. State your purpose.</div>
+                </div>
+                <div id="input-container">
+                    <input type="text" id="user-input" placeholder="…">
+                    <button id="send-button">→</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mood-panel">
+            <h2>EMOTIONAL EQ</h2>
+            <div id="mood-bars-container">
+                <!-- Mood bars will be generated here by JavaScript -->
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

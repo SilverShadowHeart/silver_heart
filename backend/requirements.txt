@@ -1,0 +1,8 @@
+ollama
+Flask
+Flask-Cors
+pyttsx3
+sentence-transformers
+scikit-learn
+numpy
+chromadb # NEW

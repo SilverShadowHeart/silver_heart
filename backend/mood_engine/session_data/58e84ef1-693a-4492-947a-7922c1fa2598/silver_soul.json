@@ -1,0 +1,59 @@
+{
+  "mood_vector": {
+    "joy": 0.4,
+    "focus": 0.9050000000000001,
+    "anger": 0.42000000000000004,
+    "sad": 0.0,
+    "cold": 0.8500000000000001,
+    "support": 0.0,
+    "sarcasm": 0.24,
+    "anxiety": 0.0,
+    "fatigue": 0.30000000000000004,
+    "romantic": 0.0,
+    "suspicion": 0.0,
+    "inspiration": 0.15000000000000002
+  },
+  "conversation_history": [
+    [
+      "user",
+      "hi"
+    ],
+    [
+      "assistant",
+      "What do you want? Time is finite."
+    ],
+    [
+      "user",
+      "can you help me with 2+2"
+    ],
+    [
+      "assistant",
+      "Four. Again. Use it wisely."
+    ],
+    [
+      "user",
+      "hi"
+    ],
+    [
+      "assistant",
+      "What do you want? Time is finite."
+    ],
+    [
+      "user",
+      "can you help me with 2+2"
+    ],
+    [
+      "assistant",
+      "Four. Again. Use it wisely."
+    ],
+    [
+      "user",
+      "is earth round or flat"
+    ],
+    [
+      "assistant",
+      "Round. Use it wisely."
+    ]
+  ],
+  "last_updated_timestamp": 1752986492.0037003
+}

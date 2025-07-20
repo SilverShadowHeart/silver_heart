@@ -1,0 +1,246 @@
+@keyframes pulse {
+    0% { box-shadow: 0 0 5px var(--accent-color); }
+    50% { box-shadow: 0 0 12px var(--accent-color); }
+    100% { box-shadow: 0 0 5px var(--accent-color); }
+}
+
+:root {
+    /* --- Super Dark Theme with High Contrast --- */
+    --bg-color: #050505; /* Near black */
+    --panel-color: #0d0d0d; /* Very dark charcoal */
+    --border-color: #333333; /* A visible grey for borders */
+    --text-color: #e0e0e0; /* Bright, slightly off-white for text */
+    --text-muted-color: #777; /* Lighter muted text for contrast */
+    --accent-color: #00c2c7; /* The signature cyan */
+    --user-msg-bg: #222222;
+    --ai-msg-border: var(--border-color);
+    --input-bg: #1a1a1a;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Consolas', 'Menlo', 'Courier New', monospace;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#main-container {
+    width: 1000px;
+    height: 90vh;
+    max-height: 900px;
+    display: flex;
+    border: 1px solid var(--border-color);
+    background-color: var(--panel-color);
+    /* --- THE SUBTLE CYAN GLOW --- */
+    box-shadow: 0 0 35px rgba(0, 194, 199, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#chat-panel {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 4px;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+#status-indicator {
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+    position: absolute;
+    right: 25px;
+    animation: pulse 2s infinite;
+}
+
+#chat-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#chat-log {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-message, .ai-message {
+    margin-bottom: 15px;
+    padding: 12px 18px;
+    border-radius: 15px;
+    max-width: 80%;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.user-message {
+    background-color: var(--user-msg-bg);
+    align-self: flex-end;
+    border: 1px solid #2f2f2f;
+}
+
+.ai-message {
+    background-color: transparent;
+    border: 1px solid var(--ai-msg-border);
+    align-self: flex-start;
+}
+
+.ai-message.initial-message {
+    align-self: center;
+    text-align: center;
+    color: var(--text-muted-color);
+    border-style: dashed;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#input-container {
+    display: flex;
+    padding: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+#user-input {
+    flex-grow: 1;
+    background-color: var(--input-bg);
+    border: 1px solid #333;
+    color: var(--text-color);
+    padding: 12px;
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#user-input:focus {
+    border-color: var(--accent-color);
+}
+
+#send-button {
+    background-color: transparent;
+    color: var(--text-muted-color);
+    border: 1px solid var(--border-color);
+    padding: 10px 18px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+#send-button:hover {
+    background-color: var(--accent-color);
+    color: var(--panel-color);
+    border-color: var(--accent-color);
+}
+
+
+/* --- Mood Panel Styles --- */
+#mood-panel {
+    width: 300px;
+    border-left: 1px solid var(--border-color);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: #0a0a0a; /* Slightly different dark for separation */
+}
+
+#mood-panel h2 {
+    text-align: center;
+    font-size: 16px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    color: var(--text-muted-color);
+}
+
+#mood-bars-container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.mood-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.mood-bar .mood-label {
+    width: 110px;
+    font-size: 12px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text-muted-color);
+    transition: color 0.5s ease;
+}
+
+.mood-bar .mood-label.active {
+    color: var(--text-color); /* Make label brighter when mood is active */
+}
+
+.mood-bar .mood-indicator {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.mood-indicator .mood-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #222;
+    border: 1px solid #333;
+    transition: all 0.5s ease;
+}
+
+.mood-indicator .mood-progress-bg {
+    flex-grow: 1;
+    height: 6px;
+    background-color: #222;
+    border-radius: 3px;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+
+.mood-progress-bg .mood-progress-fg {
+    height: 100%;
+    width: 0%;
+    background-color: var(--text-muted-color);
+    border-radius: 3px;
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
